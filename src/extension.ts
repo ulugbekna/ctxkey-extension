@@ -10,17 +10,46 @@ export function activate(context: vscode.ExtensionContext) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "ctxkey-extension" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('ctxkey-extension.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from ctxkey-extension!');
-	});
+	context.subscriptions.push(
+		vscode.commands.registerCommand('ctxkey-extension.helloWorld1', () => {
+			// The code you place here will be executed every time your command is executed
+			// Display a message box to the user
+			vscode.window.showInformationMessage('Hello World from ctxkey-extension!');
+		})
+	);
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(
+		vscode.commands.registerCommand('ctxkey-extension.helloWorld2', () => {
+			// The code you place here will be executed every time your command is executed
+			// Display a message box to the user
+			vscode.window.showInformationMessage('Hello World from ctxkey-extension!');
+		})
+	);
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand('ctxkey-extension.helloWorld3', () => {
+			// The code you place here will be executed every time your command is executed
+			// Display a message box to the user
+			vscode.window.showInformationMessage('Hello World from ctxkey-extension!');
+		})
+	);
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand('ctxkey-extension.helloWorld4', () => {
+			// The code you place here will be executed every time your command is executed
+			// Display a message box to the user
+			vscode.window.showInformationMessage('Hello World from ctxkey-extension!');
+		})
+	);
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand('ctxkey-extension.helloWorld5', () => {
+			// The code you place here will be executed every time your command is executed
+			// Display a message box to the user
+			vscode.window.showInformationMessage('Hello World from ctxkey-extension!');
+		})
+	);
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

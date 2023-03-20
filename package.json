@@ -14,21 +14,42 @@
   "contributes": {
     "commands": [
       {
-        "command": "ctxkey-extension.helloWorld",
-        "title": "Hello World",
-        "enablement": "a"
+        "command": "ctxkey-extension.helloWorld1",
+        "title": "Hello World - present 1"
       },
       {
-        "command": "ctxkey-extension.helloWorld",
-        "title": "Hello World",
-        "enablement": "a"
+        "command": "ctxkey-extension.helloWorld2",
+        "title": "Hello World - present 2"
       },
       {
-        "command": "ctxkey-extension.helloWorld",
-        "title": "Hello World",
-        "enablement": "a"
+        "command": "ctxkey-extension.helloWorld3",
+        "title": "Hello World - present 3"
+      },
+      {
+        "command": "ctxkey-extension.helloWorld4",
+        "title": "Hello World - present 4"
       }
-    ]
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "ctxkey-extension.helloWorld1",
+          "when": "editorLangId === json"
+        },
+        {
+          "command": "ctxkey-extension.helloWorld2",
+          "when": "!(editorLangId === json || editorLangId === python)"
+        },
+        {
+          "command": "ctxkey-extension.helloWorld3",
+          "when": "!(editorLangId =~ /json/)"
+        },
+        {
+          "command": "ctxkey-extension.helloWorld4",
+          "when": "false"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
